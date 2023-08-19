@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+   <a href="https://gamerant.com/">Gamerant News</a>
+</h1>
+
+<ul>
+    {% for t, l in data_list %}
+        <li><a id="first" href='https://gamerant.com{{l}}'>{{t}}</a></li>
+    {% endfor %}
+</ul>
+
+
+<h1>
+   <a href="https://gamespot.com/">Gamespot News</a>
+</h1>
+
+<ul>
+    {% for t, l in data_list2 %}
+        <li><a id="second" href='https://www.gamespot.com{{l}}'>{{t}}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

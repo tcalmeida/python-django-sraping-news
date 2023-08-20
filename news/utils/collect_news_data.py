@@ -38,10 +38,10 @@ class News:
             link_parse = urlparse(link)
             links.append(link_parse.path)
 
-        # news_dict = {"Titles": titles, "Links": links}
-        # latest_news = pd.DataFrame(news_dict)
-        # latest_news.to_csv("gamerant.csv")
+        news_dict = {'Titles': titles, 'Links': links}
+        latest_news = pd.DataFrame(news_dict)
+        latest_news.to_csv("gamerant.csv")
 
-        return zip(titles, links)
+        # return zip(titles, links)
 
         driver.quit()

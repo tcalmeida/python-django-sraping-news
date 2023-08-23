@@ -20,5 +20,5 @@ from news.views import news_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', news_view, name='home')
+    path('', news_view, name='home')
 ]

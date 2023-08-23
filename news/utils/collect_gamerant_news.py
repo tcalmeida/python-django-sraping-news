@@ -25,14 +25,16 @@ def collect_gamerant_data(url, news_path, title_path, link_path):
     for news in news_containers:
         title = news.find_element(by='xpath', value=title_path).text
         link = news.find_element(by='xpath', value=link_path).get_attribute('href')
+
         titles.append(title)
+
         link_parse = urlparse(link)
         links.append(link_parse.path)
 
-    news_dict = {'Titles': titles, 'Links': links}
-    latest_news = pd.DataFrame(news_dict)
-    latest_news.to_csv("gamerant.csv")
-
-    return zip(titles, links)
+    # news_dict = {'Titles': titles, 'Links': links}
+    # latest_news = pd.DataFrame(news_dict)
+    # latest_news.to_csv("gamerant.csv")
 
     driver.quit()
+
+    return zip(titles, links)
